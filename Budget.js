@@ -69,7 +69,7 @@ function renderExpenses() {
       <td>${exp.category}</td>
       <td>
        <button onclick="editExpense(${index})">edit</button>
-        <button onclick="deleteExpense(${index})">delete</button>
+        <button onclick="deleteExpense(${index})"> delet</button>
       </td>
     `; 
     expList.appendChild(row);
