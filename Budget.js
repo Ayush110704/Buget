@@ -12,7 +12,13 @@ const expList = document.getElementById("expenceList");
 let budget = 0; 
 let expenses = [];
 
- 
+//save data to localStorage
+// function saveData() {
+//   localStorage.setItem("budget", budget);
+//   localStorage.setItem("expenses", JSON.stringify(expenses));
+// }
+
+// Load data from localStorage on page load
 function loadData() {
   const storedBudget = localStorage.getItem("budget");
   const storedExpenses = localStorage.getItem("expenses");
@@ -36,6 +42,8 @@ function updateBalance() {
   console.log("Budget:", budget);
 
   balanceEl.textContent = balance;
+    localStorage.setItem("budget", budget);
+
 
   if (balance < 0) {
     balanceEl.style.color = "red";
@@ -43,7 +51,7 @@ function updateBalance() {
     balanceEl.style.color = "green";
   }if ( balance < 0 ){
     alert("You have exceeded your budget!");
-  } 
+  }  
 }
 
 // Function to render expense list

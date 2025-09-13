@@ -105,3 +105,27 @@ p{
   display: flex;
   justify-content: center;
 }
+
+/* ✅ Responsive Table for Mobile */
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+}
