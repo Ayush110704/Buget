@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+</head>
+    <link rel="stylesheet" href="Style.css"> 
+<body>
+    <main>
+
+        <!-- Header -->
+
+        <h1>💰Budget Planner</h1> 
+
+        <!-- Budget Section(1) -->
+
+        <section  class="budget">
+        <form id="Budgetform">
+        <h2>Set Budget</h2>
+        <input type="number" placeholder="Enter Budget"id=amount autocomplete="off">
+        <button type="submit">Set Budget</button>  
+        </form>
+        <P>Total Budget:<span id="total">0</span></P>
+        <P>Remaning Budget:<span id="balance">0</span></P> 
+    </section>
+
+        <!-- Expence Section(2) -->
+
+    <section> 
+            <h2>Add Expence<h2>
+        <form id="expenceForm"> 
+                <input placeholder="Expence Name" id="expenceName" autocomplete="off">
+                <input placeholder="Expence Amount" id="expenceAmount" autocomplete="off"> 
+                <select id="expenceCategory">
+                    <option>Select Category</option>
+                     <option>Food</option>
+                      <option>Shoping</option>
+                       <option>Traveling</option>
+                        <option>Other</option>
+                </select>
+                <button type="submit">Add Expence</button> 
+        </form>
+    </section>
+
+        <!-- Expence List(3) -->
+
+        <section>
+        <div class="tmain">
+            <h2>Expence List</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                         <th>Amount</th>
+                          <th>Category</th>
+                           <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expenceList"></tbody>
+            </table>
+        </div> 
+        </section>
+</main>
+
+    <!-- Footer -->
+
+    <footer>© 2025 Budget Planner | Built by Ayush</footer>
+</body>
+<script src="Budget.js"></script>
+</html>
