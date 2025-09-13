@@ -129,3 +129,69 @@ p{
     padding: 8px 6px;
   }
 }
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;  /* reduce padding for small screens */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input, select, button {
+    padding: 10px 12px;
+    font-size: 15px;
+    width: 100%; /* full width for easier typing */
+    margin: 6px 0;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    flex-direction: column; /* stack emoji/title */
+    gap: 5px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
