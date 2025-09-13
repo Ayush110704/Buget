@@ -118,6 +118,12 @@ p{
     padding: 10px 8px;
     font-size: 14px;
   }
+  
+    input, select, button {
+      width: 100%;
+      margin: 8px 0;
+    
+  }
 }
 
 @media (max-width: 480px) {
