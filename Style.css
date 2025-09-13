@@ -1,14 +1,16 @@
- * {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #89f7fe, #66a6ff);
   color: #333;
-  padding: 40px; 
+  padding: 40px;
   min-height: 795px;
 }
 
@@ -26,8 +28,8 @@ section {
   padding: 25px;
   margin-bottom: 25px;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
-} 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
 
 /* Headings */
 h1 {
@@ -47,13 +49,15 @@ h2 {
 }
 
 /* Inputs & Buttons */
-input, select, button {
+input,
+select,
+button {
   padding: 12px 15px;
   border: 2px solid #ccc;
   border-radius: 10px;
   font-size: 1rem;
   margin: 5px;
-  outline: none; 
+  outline: none;
 }
 
 /* Buttons */
@@ -62,15 +66,16 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  font-weight: bold; 
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
   background: linear-gradient(135deg, #38f9d7, #43e97b);
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 
-/**************TABLE**************/
+/************** TABLE **************/
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -78,7 +83,8 @@ button:hover {
   border-radius: 12px;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: center;
   border: 1px solid #eee;
@@ -93,6 +99,12 @@ tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.6);
 }
 
+/* ✅ CHANGE: Action buttons spacing */
+.table td button {
+  margin: 3px;
+  min-width: 70px;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -101,39 +113,17 @@ footer {
   color: #222;
 }
 
-p{ 
+p {
   display: flex;
   justify-content: center;
 }
 
-/* ✅ Responsive Table for Mobile */
-@media (max-width: 768px) {
-  .table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+/**************** Responsive ****************/
 
-  th, td {
-    padding: 10px 8px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .table {
-    font-size: 13px;
-  }
-
-  th, td {
-    padding: 8px 6px;
-  }
-}
-
-/* ✅ Responsive Adjustments */
+/* Tablet */
 @media (max-width: 768px) {
   body {
-    padding: 20px;  /* reduce padding for small screens */
+    padding: 20px;
   }
 
   h1 {
@@ -144,10 +134,12 @@ p{
     font-size: 1.3rem;
   }
 
-  input, select, button {
+  input,
+  select,
+  button {
     padding: 10px 12px;
     font-size: 15px;
-    width: 100%; /* full width for easier typing */
+    width: 100%;
     margin: 6px 0;
   }
 
@@ -158,11 +150,13 @@ p{
     font-size: 14px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px 8px;
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   body {
     padding: 15px;
@@ -170,7 +164,7 @@ p{
 
   h1 {
     font-size: 1.5rem;
-    flex-direction: column; /* stack emoji/title */
+    flex-direction: column;
     gap: 5px;
   }
 
@@ -178,7 +172,9 @@ p{
     font-size: 1.1rem;
   }
 
-  input, select, button {
+  input,
+  select,
+  button {
     font-size: 14px;
     padding: 8px 10px;
   }
@@ -187,11 +183,26 @@ p{
     font-size: 13px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 8px 6px;
   }
 
   footer {
     font-size: 12px;
+  }
+
+  /* ✅ CHANGE: Stack action buttons vertically on mobile */
+  .table td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .table td button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
   }
 }
