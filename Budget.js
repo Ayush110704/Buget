@@ -3,11 +3,11 @@ const amountInput = document.getElementById("amount");
 const totalBudgetEl = document.getElementById("total");
 const balanceEl = document.getElementById("balance"); 
 
-const expForm = document.getElementById("expenceForm");
-const expName = document.getElementById("expenceName");
-const expAmount = document.getElementById("expenceAmount");
-const expCategory = document.getElementById("expenceCategory");
-const expList = document.getElementById("expenceList");
+const expForm = document.getElementById("expenseForm");
+const expName = document.getElementById("expenseName");
+const expAmount = document.getElementById("expenseAmount");
+const expCategory = document.getElementById("expenseCategory");
+const expList = document.getElementById("expenseList");
 
 let budget = 0; 
 let expenses = [];
