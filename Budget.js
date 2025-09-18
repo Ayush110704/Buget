@@ -54,6 +54,25 @@ function updateBalance() {
   }  
 }
 
+//add more budget
+function editBudget() {   
+  const extraBudget = parseInt(amountInput.value) || 0; 
+  if (extraBudget <= 0) {
+    alert("Enter a valid amount to add!");
+    return;
+  }
+  const storedBudget = parseInt(localStorage.getItem("budget")) || 0;
+
+  //  add new amount
+  budget = storedBudget + extraBudget;
+  console.log("New Budget added:", budget);
+  totalBudgetEl.textContent = budget;
+  updateBalance();
+  localStorage.setItem("budget", budget); 
+  budgetForm.reset(); 
+}
+
+
 // Function to render expense list
 function renderExpenses() {
   expList.innerHTML = "";// jab bhi render karenge to pehle list ko clear kr ne k liye 
